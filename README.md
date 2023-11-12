@@ -7,8 +7,8 @@ projeto em desenvolvimento
 - Docker - v24.0.6 RECOMENDADO
 
 ## Dependencias:  ☕️
-npm i express mysql dotenv hbs <b>
-npm i --save nodemon  <b>
-npm install mysql2  <b>
-npm i bcryptjs <b>
+npm i express mysql dotenv hbs <br>
+npm i --save nodemon  <br>
+npm install mysql2  <br>
+npm i bcryptjs <br>
 npm i cookie-parser jsonwebtoken 
