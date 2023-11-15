@@ -11,23 +11,47 @@
 <body>
 
   <!-- Menú -->
-  <nav>
-    <h4>100 x Mais</h4>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/gallery">Galeria</a>
-      </li>
-      <li>
-        <a href="/profile">Minha Conta</a>
-      </li>
-      <li>
-        <a href="/auth/logout">Sair</a>
-      </li>
-    </ul>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
+				<div class="container">
+					<a class="navbar-brand" href="/">
+										<img src="https://i.ibb.co/T0r5M2H/logo-ong.png" alt="" style="max-width: 100px; max-height: 50px;">
+								</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="/">Início</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/gallery">Galeria</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/contato">Contato</a>
+							</li>
+
+							<li class="nav-item">
+								<button class="btn-donate"><a class="nav-link" href="/donation">Doar</a></button>
+							</li>
+
+							{{#if user}}
+							<li class="nav-item">
+								<a class="nav-link" href="/profile">Minha Conta</a>
+							</li >
+							<li class="nav-item">
+								<a class="nav-link" href="/auth/logout">Sair</a>
+							</li>
+							{{else}}
+							<li class="nav-item">
+								<a class="nav-link" href="login">Login</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="register">Register</a>
+							</li>
+							{{/if}}
+							
+						</ul>
+					</div>
+				</div>
+	</nav>
   <!-- /Menú -->
 
   <!-- Formulário de cadastro -->
@@ -120,6 +144,71 @@
 
   </div>
   <!-- /Formulário de cadastro -->
+
+  <!-- Footer -->
+   <footer>
+      <div class="footer-content">
+        <div id="contacts">
+          <!-- Texto do rodapé -->
+          <img class="logo-footer" src="https://i.ibb.co/T0r5M2H/logo-ong.png" alt="logo-footer">
+    
+          <!-- social links -->
+          <div id="social_links">
+            <a href="https://instagram.com/projetosocial100vezesmais?igshid=MzMyNGUyNmU2YQ==" class="footer-link" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+    
+            <a href="#" class= "footer-link" id="facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+    
+            <a href="#" class="footer-link" id="linkedin">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        
+        
+        <!-- Lista de links-->
+        <ul class="footer-list">
+          <li>
+            <h3>Mapa do Site</h3>
+          </li>
+          <li>
+            <a href="/" class="footer-link">Início</a>
+          </li>
+          <li>
+            <a href="/gallery" class="footer-link">Galeria</a>
+          </li>
+          <li>
+            <a href="/contato" class="footer-link">Contato</a>
+          </li>
+          <li>
+            <a href="/donation" class="footer-link">Doar</a>
+          </li>
+        </ul>
+    
+        <!-- Lista de links do blog-->
+        <ul class="footer-list">
+          <li>
+            <h3>Informações</h3>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Termos de Uso</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Política de Privacidade</a>
+          </li>
+        </ul>
+      </div>
+    
+      <!-- Direitos autorais-->
+      <div class="copyright">
+        Cem Vezes Mais © 2023 todos direitos reservados
+      </div>
+   </footer>
+  <!-- /Footer -->
+
 
 <!-- JS Bootstrap 4.6 -->
  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

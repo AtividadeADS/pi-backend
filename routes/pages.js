@@ -37,5 +37,8 @@ router.get('/contato', (req, res) => {
 router.get('/donation', (req, res) => {
   res.render('donation')
 })
+router.get('/donationPagamento', (req, res) => {
+  res.render('donationPagamento')
+})
 
 module.exports = router
