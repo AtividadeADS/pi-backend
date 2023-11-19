@@ -15,10 +15,11 @@
     <title>Galeria</title>
 </head>
 <body>
+    <!--Menú-->
     <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
 		<div class="container">
-			<a class="navbar-brand" href="/">
-                <img src="https://i.ibb.co/HTcvrMt/logo-ong.png" alt="" style="max-width: 100px; max-height: 50px;">
+			<a class="navbar-brand" href="index.html">
+                <img src="https://i.ibb.co/RTXnCM3/logo-ong.png" alt="" style="max-width: 100px; max-height: 50px;">
             </a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -36,26 +37,28 @@
 						<button class="btn-donate"><a class="nav-link" href="/donation">Doar</a></button>
 					</li>
 
-          {{#if user}}
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Minha Conta</a>
-          </li >
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/logout">Sair</a>
-          </li>
-          {{else}}
-          <li class="nav-item">
-            <a class="nav-link" href="login">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="register">Register</a>
-          </li>
-          {{/if}}
-          
+                    {{#if user}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Minha Conta</a>
+                    </li >
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/logout">Sair</a>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register">Register</a>
+                    </li>
+                    {{/if}}
+
 				</ul>
 			</div>
 		</div>
 	</nav>
+    <!--/Menú-->
+
 
     <div class="titulo">
         <h1>Galeria</h1>

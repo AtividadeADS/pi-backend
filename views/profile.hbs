@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <!-- CSS Public -->
   <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/gallery.css">
+  <link rel="stylesheet" href="/public.css">
+  <!-- CSS Bootstrap -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<!-- CSS Icons -->
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  
   <title>Profile</title>
 </head>
 <body>
@@ -14,24 +20,24 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
 				<div class="container">
 					<a class="navbar-brand" href="/">
-										<img src="https://i.ibb.co/T0r5M2H/logo-ong.png" alt="" style="max-width: 100px; max-height: 50px;">
-								</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+						<img src="https://i.ibb.co/T0r5M2H/logo-ong.png" alt="" style="max-width: 100px; max-height: 50px;">
+					</a> 
+          <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 							<li class="nav-item">
 								<a class="nav-link" href="/">Início</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/gallery">Galeria</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/contato">Contato</a>
-							</li>
+              <li class="nav-item">
+                <a class="nav-link" href="/gallery">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contato">Contato</a>
+              </li>
 
-							<li class="nav-item">
-								<button class="btn-donate"><a class="nav-link" href="/donation">Doar</a></button>
-							</li>
-
+              <li class="nav-item">
+                <button class="btn-donate"><a class="nav-link" href="/donation">Doar</a></button>
+              </li>
 							{{#if user}}
 							<li class="nav-item">
 								<a class="nav-link" href="/profile">Minha Conta</a>
@@ -47,95 +53,70 @@
 								<a class="nav-link" href="register">Register</a>
 							</li>
 							{{/if}}
-							
 						</ul>
 					</div>
 				</div>
 	</nav>
   <!-- /Menú -->
 
-  <!-- Formulário de cadastro -->
-  <div class="container  mt-4">
-
-    <div class="row">
-      <div class="col-4">
-        <div class="card" >
+  <!-- Info Profile -->
+  <div class="container mt-4">
+    <div class="row mb-3  ">
+      <!-- Info Profile Left -->
+      <div class="col-5">
+        <div class="card " >
           <div class="card">
             <div class="avatar-ctn">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0m5Cy4lXCbuyG54L0vuo3i5-ALavHe9KmhWA_wDM&s3o=" alt="profile picture">
+              <img class="avatar" src="https://i.ibb.co/T0r5M2H/logo-ong.png" alt="profile picture">
             </div>
-            <div class="card-body">
-              <h5 class="card-title"> {{user.name}} </h5>
-              <p class="card-text"> 10 Vezes Mais </p>
-              <a href="#" class="btn btn-primary">{{user.email}}</a>
+            <div class="card-body text-center ">
+              <div class="align-items-center">
+                <h5 class="card-title text-info-emphasis"> {{user.name}} </h5>
+                <p class="card-text text-success fw-light"> Fazendo a diferença na vida de dezenas de criaças </p>  
+
+                <a href="gmail.com" class="btn bg-warning">{{user.email}}</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- /Info Profile Left -->
 
-      <div class="col-8">
-        <!--<div class="card text-center">
+      <!-- Info Profile Right -->
+      <div class="col-7 bg-warning-subtle">
+        <div class="card text-center mt-3 mb-3">
           <div class="card-header">
-            Profile Page
+            Página Pessoal
           </div>
           <div class="card-body">
 
-            <h5 class="card-title">Seja Bem vindo {{user.name}}!</h5>
-            <p class="card-text">pode escrever os que quiser vamos colocar as mensagens do contato aqui vai ser muito topzera! Você també pode colocar a galeria para trocar as imagens</p>
-            
-            <a href="#" class="btn btn-primary">Botão para fazer alguma coisa</a>
-            
-            <div class="card-footer mt-4">Galeria ou mensagens</div>
-          </div>
-        </div>-->
+            <h5 class="card-title mb-2">Seja bem vindo {{user.name}}!</h5>
+            <p class="card-text mt-2">Mudar a casa, a vila, o bairro, a cidade, o estado, o país, o mundo... resgatar sonhos e restabelecer a esperança de crianças, adolescentes e jovens em situação de vulnerabilidade, afim de oferecer-lhes um presente mais digno e um futuro mais promissor.</p>
 
-        <!--Gallery-->
-        <div class="titulo">
-        <h1>Galeria</h1>
-        </div>
-
-        <div class="container bg-secondary mb-5">
-            <div class="row-2">
-                <div class="column">
-                  <img src="https://i.ibb.co/XpDg2wM/023.jpg">
-                  <img src="https://i.ibb.co/CH1h5CZ/004.jpg">
-                  <img src="https://i.ibb.co/0ZKSDwv/023.jpg">
-                  <img src="https://i.ibb.co/F73mcF3/014.jpg">
-                  <img src="https://i.ibb.co/CQmzzV1/012.jpg">
-                  
-                </div>
-                <div class="column">
-                    <img src="https://i.ibb.co/RPH7fwC/021.jpg">
-                    <img src="https://i.ibb.co/2tVLzZj/001.jpg">
-                    <img src="https://i.ibb.co/y5Jvwk6/006.jpg">
-                    <img src="https://i.ibb.co/F73mcF3/014.jpg">
-        
-                </div>
-                <div class="column">
-                    <img src="https://i.ibb.co/F73mcF3/014.jpg">
-                    <img src="https://i.ibb.co/RhC0ch1/011.jpg">
-                    <img src="https://i.ibb.co/CQmzzV1/012.jpg">
-                    <img src="https://i.ibb.co/h1Z6bVq/013.jpg">
-                    <img src="https://i.ibb.co/2tVLzZj/001.jpg">
-                </div>
-              
+            <!-- Button PDF -->
+            <p class="d-inline-flex gap-1"> 
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Saiba mais sobre o projeto
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                <embed src="assets/projetosonhos.pdf" type="application/pdf" width="100%" height="700px">
               </div>
-        </div>
-
-  <!-- /Gallery -->
-
-
+            </div>
+            <!-- /Button PDF -->
             
-
-      </div>
+          </div>
         </div>
-        
       </div>
-    </div>
+      <!-- /Info Profile Right -->
+    </div>   
+  </div>
+  
 
     
 
-  <!-- /Formulário de cadastro -->
+  <!-- /Info Profile -->
     {{#if message}}
 
     <h4 class="alert alert-danger mt-4">{{message}}</h4>
@@ -211,8 +192,10 @@
 
 
 <!-- JS Bootstrap 4.6 -->
- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <!-- /JS Bootstrap -->
 
 </body>

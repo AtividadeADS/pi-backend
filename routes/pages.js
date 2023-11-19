@@ -27,18 +27,26 @@ router.get('/profile', authController.isLoggedIn, (req, res) => {
   }
 })
 
-router.get('/gallery', (req, res) => {
-  res.render('gallery')
+router.get('/gallery', authController.isLoggedIn, (req, res) => {
+  res.render('gallery', {
+    user: req.user
+  })
 })
 
-router.get('/contato', (req, res) => {
-  res.render('contato')
+router.get('/contato', authController.isLoggedIn, (req, res) => {
+  res.render('contato', {
+    user: req.user
+  })
 })
-router.get('/donation', (req, res) => {
-  res.render('donation')
+router.get('/donation', authController.isLoggedIn, (req, res) => {
+  res.render('donation', {
+    user: req.user
+  })
 })
-router.get('/donationPagamento', (req, res) => {
-  res.render('donationPagamento')
+router.get('/donationPagamento', authController.isLoggedIn, (req, res) => {
+  res.render('donationPagamento', {
+    user: req.user
+  })
 })
 
 module.exports = router
