@@ -49,4 +49,16 @@ router.get('/donationPagamento', authController.isLoggedIn, (req, res) => {
   })
 })
 
+router.get('/termosDeUso', authController.isLoggedIn, (req, res) => {
+  res.render('termosDeUso', {
+    user: req.user
+  })
+})
+
+router.get('/privacidade', authController.isLoggedIn, (req, res) => {
+  res.render('privacidade', {
+    user: req.user
+  })
+})
+
 module.exports = router
